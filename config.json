@@ -1,0 +1,13 @@
+{
+  "output": {
+    "folder": "out",
+    "bestFolder": "best",
+    "masterFolder": "master"
+  },
+  "channels": [
+    {
+      "slug": "serhat_tv",
+      "url": "https://www.twitch.tv/serhattvlive"
+    }
+  ]
+}
