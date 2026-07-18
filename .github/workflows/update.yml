@@ -4,6 +4,9 @@ on:
   schedule:
     - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
   workflow_dispatch: # Manuel tetikleme butonu
+  push:
+    paths:
+      - 'config.json' # Bu dosya değiştiğinde otomatik çalışır
 
 permissions:
   contents: write
