@@ -93,7 +93,7 @@ def main():
         print(f"  URL: {url}")
         
         # --- CATCAST KONTROLÜ BURADA BAŞLIYOR ---
-        if "catcast.tv" in url:
+        if "catcast.tv" in url and ".m3u8" not in url:
             extracted_url = get_catcast_m3u8(url)
             if extracted_url:
                 url = extracted_url
