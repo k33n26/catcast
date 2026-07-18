@@ -1,20 +1,35 @@
-name: Update IPTV List
+name: M3U8 Listelerini Guncelle
+
 on:
   schedule:
-    - cron: '0 * * * *' # Her saat başı
-  workflow_dispatch: # Manuel çalıştırmak için buton
+    - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
+  workflow_dispatch: # Manuel tetikleme butonu
+
+permissions:
+  contents: write
 
 jobs:
-  update:
+  guncelle:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: Run Generator
-        run: python update_list.py
-      - name: Commit files
+      - name: Repoyu Klonla
+        uses: actions/checkout@v4
+
+      - name: Python Kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: streamlink Yükle
+        run: pip install -r requirements.txt
+
+      - name: Scripti Çalıştır
+        run: python update_list.py config.json
+
+      - name: Değişiklikleri Kaydet ve Yükle
         run: |
-          git config --local user.email "action@github.com"
-          git config --global user.name "GitHub Action"
-          git add channels.m3u
-          git commit -m "Update playlist" || exit 0
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .
+          git commit -m "Yayın linkleri güncellendi" || echo "Değişiklik yok"
           git push
