@@ -20,6 +20,10 @@
     {
       "slug": "show_tv",
       "url": "https://www.showtv.com.tr/canli-yayin"
+    },
+    {
+      "slug": "A_tv",
+      "url": "https://www.atv.com.tr/canli-yayin"
     }
   ]
 }
