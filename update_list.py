@@ -1,31 +1,8 @@
 import streamlink
 import sys
-import os
+import os 
 import json
 import traceback
-import requests
-import re
-
-def get_catcast_m3u8(url):
-    # Siteye gerçek bir tarayıcıdan giriyormuşuz gibi görünmek için başlık (header) ekliyoruz
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-    }
-    
-    try:
-        response = requests.get(url, headers=headers, timeout=10)
-        response.raise_for_status()
-        
-        match = re.search(r'(https?://[^\s"\'<>]+?\.m3u8)', response.text)
-        
-        if match:
-            return match.group(1)
-        else:
-            return None
-            
-    except Exception as e:
-        print(f"  ❌ Catcast bağlantı hatası: {e}")
-        return None
 
 def info_to_text(stream_info, url):
     text = '#EXT-X-STREAM-INF:'
@@ -92,18 +69,6 @@ def main():
         print(f"[{idx}/{len(channels)}] Processing: {slug}")
         print(f"  URL: {url}")
         
-        # --- CATCAST KONTROLÜ BURADA BAŞLIYOR ---
-        if "catcast.tv" in url and ".m3u8" not in url:
-            extracted_url = get_catcast_m3u8(url)
-            if extracted_url:
-                url = extracted_url
-                print(f"  🔗 Catcast linki çözüldü: {url}")
-            else:
-                print(f"  ⚠️ Catcast m3u8 linki bulunamadı, atlanıyor...")
-                fail_count += 1
-                continue
-        # --- CATCAST KONTROLÜ BURADA BİTİYOR ---
-        
         try:
             # Get streams and playlists
             streams = streamlink.streams(url)
@@ -128,13 +93,9 @@ def main():
 
             # Check http/https options
             http_flag = False
-            if url.startswith("http://") and "catcast.tv" not in url: 
-                # Catcast linkleri m3u8 olarak geldiğinde plugin'e girip hata vermemesi için koruma
-                try:
-                    plugin_name, plugin_type, given_url = streamlink.session.Streamlink().resolve_url(url)
-                    http_flag = True
-                except:
-                    pass
+            if url.startswith("http://"):
+                plugin_name, plugin_type, given_url = streamlink.session.Streamlink().resolve_url(url)
+                http_flag = True
 
             for playlist in playlists:
                 uri = playlist.uri
