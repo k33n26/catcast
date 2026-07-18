@@ -12,6 +12,10 @@
     {
       "slug": "kayseri_tv",
       "url": "https://www.twitch.tv/kayseri_televizyonu"
+    },
+    {
+      "slug": "bizimbergama_tv",
+      "url": "https://www.twitch.tv/bizimbergama"
     }
   ]
 }
