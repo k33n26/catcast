@@ -44,6 +44,10 @@
     {
        "slug": "telezentvchannel",
        "url": "https://kick.com/telezentvchannel"  
+    },
+    {
+       "slug": "zumibox",
+       "url": "https://kick.com/zumibox"  
     }
   ]
 }
