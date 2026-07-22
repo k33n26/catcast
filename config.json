@@ -40,6 +40,10 @@
     {
       "slug": "sirius",
       "url": "https://www.twitch.tv/siriushdtv"
+    },
+    {
+       "slug": "telezentvchannel",
+       "url": "https://kick.com/telezentvchannel"  
     }
   ]
 }
