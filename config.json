@@ -50,8 +50,8 @@
        "url": "https://kick.com/zumibox"  
     },
     {
-       "slug": "nhk",
-       "url": "https://www3.nhk.or.jp/nhkworld/en/live_tv/"  
+       "slug": "van_tv",
+       "url": "https://kick.com/vantv"  
     }
   ]
 }
