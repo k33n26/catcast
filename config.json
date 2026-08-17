@@ -56,6 +56,10 @@
     {
        "slug": "pro_tv",
        "url": "https://kick.com/ahmetstknzmttnbkr"  
+    },
+    {
+       "slug": "yol_tv",
+       "url": "https://www.yoltv.com/live.php"  
     }
   ]
 }
