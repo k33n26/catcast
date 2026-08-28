@@ -60,6 +60,10 @@
     {
        "slug": "tpa_online",
        "url": "https://kick.com/tpaonline"  
+    },
+    {
+       "slug": "lvdiez",
+       "url": "https://kick.com/lvdiez"  
     }
   ]
 }
