@@ -68,6 +68,10 @@
     {
        "slug": "telemedellin",
        "url": "https://kick.com/telemedellin"  
+    },
+    {
+       "slug": "vtvcanal8",
+       "url": "https://kick.com/vtvcanal8"  
     }
   ]
 }
