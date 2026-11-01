@@ -88,6 +88,10 @@
     {
        "slug": "tvxturkiye",
        "url": "https://kick.com/tvx-turkiyetv"  
+    },
+    {
+       "slug": "resurrection",
+       "url": "https://kick.com/resurrection-channel-tv"  
     }
   ]
 }
