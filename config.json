@@ -96,6 +96,10 @@
     {
        "slug": "efsanetv",
        "url": "https://kick.com/efsane_tv"  
+    },
+    {
+       "slug": "monarchtv",
+       "url": "https://kick.com/monarch-turkiye"  
     }
   ]
 }
