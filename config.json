@@ -100,6 +100,10 @@
     {
        "slug": "monarchtv",
        "url": "https://kick.com/monarch-turkiye"  
+    },
+    {
+       "slug": "cevizlitv",
+       "url": "https://kick.com/cevizlitv"  
     }
   ]
 }
