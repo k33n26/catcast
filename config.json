@@ -92,6 +92,10 @@
     {
        "slug": "resurrection",
        "url": "https://kick.com/resurrection-channel-tv"  
+    },
+    {
+       "slug": "efsanetv",
+       "url": "https://kick.com/efsane_tv"  
     }
   ]
 }
