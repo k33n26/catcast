@@ -84,6 +84,10 @@
     {
        "slug": "torbatv",
        "url": "https://www.canlitv.diy/torba-tv"  
+    },
+    {
+       "slug": "tvxturkiye",
+       "url": "https://kick.com/tvx-turkiyetv"  
     }
   ]
 }
