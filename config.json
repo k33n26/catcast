@@ -116,6 +116,10 @@
     {
        "slug": "hurturkmedya",
        "url": "https://www.twitch.tv/hurturkmedya"  
+    },
+    {
+       "slug": "iceltvmersin",
+       "url": "https://www.twitch.tv/iceltv_mersin"  
     }
   ]
 }
