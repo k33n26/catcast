@@ -108,6 +108,10 @@
     {
        "slug": "sgtvstream",
        "url": "https://www.twitch.tv/sgtvstream"  
+    },
+    {
+       "slug": "demtvglobal",
+       "url": "https://www.twitch.tv/demtvglobal"  
     }
   ]
 }
