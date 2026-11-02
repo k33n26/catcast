@@ -2,7 +2,7 @@ name: M3U8 Listelerini Guncelle
 
 on:
   schedule:
-    - cron: '0 */3 * * *' # Her 3 saatte bir otomatik çalışır
+    - cron: '0 */1 * * *' # Her 1 saatte bir otomatik çalışır
   workflow_dispatch: # Manuel tetikleme butonu
   push:
     paths:
