@@ -112,6 +112,10 @@
     {
        "slug": "demtvglobal",
        "url": "https://www.twitch.tv/demtvglobal"  
+    },
+    {
+       "slug": "hurturkmedya",
+       "url": "https://www.twitch.tv/hurturkmedya"  
     }
   ]
 }
