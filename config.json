@@ -120,6 +120,10 @@
     {
        "slug": "iceltvmersin",
        "url": "https://www.twitch.tv/iceltv_mersin"  
+    },
+    {
+       "slug": "siriosHD",
+       "url": "https://kick.com/elvin-4k-pro"  
     }
   ]
 }
